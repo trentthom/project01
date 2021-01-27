@@ -11,8 +11,15 @@
 
   <body>
     <nav>
+      <%= link_to "Home", root_path %> 
       <%= link_to "New Member", new_user_path %>
-      <a href="login">Members Login</a>
+      <%= link_to "Members Login", login_path %>
+
+      <% if @current_user.present? %>
+        <%= link_to "Logout #{@current_user.email}", login_path, :method => 'delete' %>
+      <% else %>
+
+      <% end %>
     </nav>
     <%= yield %>
   </body>

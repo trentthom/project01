@@ -1,0 +1,13 @@
+<%= form_for @comment do |f| %>
+
+  <%= @current_user.email %>
+
+  <%= f.label :"Leave your comments"%>
+  <%= f.text_field :blog, :required => true %>
+
+  <%= f.label :date %>
+  <%= f.text_field :blog, :required => true %>
+
+  <%= f.submit "Add comment" %>
+
+<% end %>

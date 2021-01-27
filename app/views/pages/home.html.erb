@@ -1,1 +1,19 @@
 <h1>Destinations</h1>
+
+<% if @current_user.present? %>
+
+    <nav>
+      <%= link_to "Add Destination", new_destination_path %>
+      
+    </nav>
+    <p>
+      Welcome back user <%= @current_user.email %>
+    </p>
+
+<% end %>
+
+<% @destinations.each do |destination| %>
+<div>
+    <p><%= link_to destination.name, destination %></p>
+</div>
+<% end %>

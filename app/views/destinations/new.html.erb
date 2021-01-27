@@ -1,0 +1,19 @@
+<h1>add new destination</h1>
+<%= form_for @destination do |f| %>
+  <%= f.label :Name %>
+  <%= f.text_field :name, :required => true %>
+
+  <%= f.label :Location %>
+  <%= f.text_field :location, :required => true %>
+
+  <%= f.label :Activity %>
+  <%= f.text_field :activity, :required => true %>
+
+  <%= f.label :'Family Friendly' %>
+  <%= f.text_field :familyf, :required => true %>
+
+  <%= f.label :Image %>
+  <%= f.url_field :image, :required => true %>
+
+  <%= f.submit "Add Your Destination" %>
+<% end %>
