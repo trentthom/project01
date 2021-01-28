@@ -1,18 +1,29 @@
 <%= form_for @destination do |f| %>
-  <%= f.label :Name %>
-  <%= f.text_field :name, :required => true %>
 
-  <%= f.label :Location %>
-  <%= f.text_field :location, :required => true %>
+  <div class="form-group">
+    <%= f.label :Name %>
+    <%= f.text_field :name, :required => true, :class => 'form-control' %>
+  </div>
 
-  <%= f.label :Activity %>
-  <%= f.text_field :activity, :required => true %>
+  <div class="form-group">
+    <%= f.label :Location %>
+    <%= f.text_field :location, :required => true, :class => 'form-control' %>
+  </div>
 
-  <%= f.label :'Family Friendly' %>
-  <%= f.text_field :familyf, :required => true %>
+  <div class="form-group">
+    <%= f.label :Activity %>
+    <%= f.text_field :activity, :required => true, :class => 'form-control' %>
+  </div>
 
-  <%= f.label :Image %>
-  <%= f.url_field :image, :required => true %>
+  <div class="form-group">
+    <%= f.label :'Family Friendly' %>
+    <%= f.text_field :familyf, :required => true, :class => 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Image %>
+    <%= f.url_field :image, :required => true, :class => 'form-control' %>
+  </div>
 
   <%= f.submit "Add Your Destination" %>
 <% end %>

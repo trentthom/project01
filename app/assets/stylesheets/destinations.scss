@@ -1,3 +1,23 @@
 // Place all the styles related to the destinations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  background-image: url(https://images.theconversation.com/files/223734/original/file-20180619-126546-bu45x8.jpg);
+}
+
+img {
+  width: -webkit-fill-available;
+
+
+}
+
+div {
+  position: relative;
+  padding-bottom: 10px;
+  // height: 400px;
+}

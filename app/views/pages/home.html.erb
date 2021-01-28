@@ -4,7 +4,7 @@
 
     <nav>
       <%= link_to "Add Destination", new_destination_path %>
-      
+
     </nav>
     <p>
       Welcome back user <%= @current_user.email %>
@@ -14,6 +14,7 @@
 
 <% @destinations.each do |destination| %>
 <div>
-    <p><%= link_to destination.name, destination %></p>
+    <!-- <p><%= link_to destination.name, destination %></p> -->
+  <%= link_to (image_tag destination.image), destination %>
 </div>
 <% end %>
