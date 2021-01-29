@@ -1,24 +1,19 @@
-# README
+#Travel blog site.
 
-This README would normally document whatever steps are necessary to get the
+When not logged in you can only view
+
+When signed up as member you can view, create, update and delete a destination.
+
+Standard NAV bar at top to get around the site.
+
+Extra Controls appears once logged in:
+New destination on home page
+Delete on destination show page
+Edit on destination show page
+Add comment on destination show page This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+#design
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby on Rails
+Bootstrap styling
