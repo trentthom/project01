@@ -1,4 +1,4 @@
-#Travel blog site.
+Travel blog site.
 
 When not logged in you can only view
 
@@ -13,7 +13,7 @@ Edit on destination show page
 Add comment on destination show page This README would normally document whatever steps are necessary to get the
 application up and running.
 
-#design
+design
 
 Ruby on Rails
 Bootstrap styling
