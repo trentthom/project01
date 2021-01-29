@@ -1,29 +1,35 @@
 <h1><%= @destination.name %></h1>
+
 <div>
   <h2>Reigon: <%= @destination.location %></h2>
   <h2>Activities: <%= @destination.activity %></h2>
   <h2>Family friendly: <%= @destination.familyf %></h2>
-
 </div>
 
 <div>
   <%= image_tag @destination.image if @destination.image.present? %>
 </div>
 
-<%= link_to "Edit Destination", edit_destination_path(@destination) %>
-<%= link_to "Delete Destination", @destination, :method => 'delete'  %>
-<%= link_to "Leave a Comment", new_comment_path(@comment) %>
-<% @destination.comments.each do |comment| %>
-<p><%= comment.blog %> - <%= comment.user.email %></p>
-<% end %>
-<%= form_for Comment.new do |f| %>
+<% if @current_user.present? %>
+  <%= link_to "Edit Destination", edit_destination_path(@destination) %>
+  <%= link_to "Delete Destination", @destination, :method => 'delete'  %>
+  <%= link_to "Leave a Comment", new_comment_path(@comment) %>
 
-  <%= f.label :"Leave your comments"%>
-  <%= f.text_field :blog, :required => true %>
 
-  <%= f.label :date %>
-  <%= f.text_field :date, :required => true %>
-  <%= hidden_field_tag :destination_id, @destination.id %>
-  <%= f.submit "Add comment" %>
+  <% @destination.comments.each do |comment| %>
+    <p><%= comment.blog %> - <%= comment.user.email %></p>
+  <% end %>
 
+  <%= form_for Comment.new do |f| %>
+
+    <%= f.label :"Leave your comments"%>
+    <%= f.text_field :blog, :required => true %>
+
+    <%= f.label :date %>
+    <%= f.text_field :date, :required => true %>
+
+    <%= hidden_field_tag :destination_id, @destination.id %>
+    <%= f.submit "Add comment" %>
+
+  <% end %>
 <% end %>
