@@ -2,18 +2,21 @@
 
 <% if @current_user.present? %>
 
-    <nav>
+    <button class="dest_button">
       <%= link_to "Add Destination", new_destination_path %>
-    </nav>
-    
-    <p>
+    </button>
+
+    <p id="welcome">
       Welcome back user <%= @current_user.email %>
     </p>
 
 <% end %>
 
 <% @destinations.each do |destination| %>
-  <div>
+  <div class="zoom">
     <%= link_to (image_tag destination.image), destination %>
+    <div class='middle'>
+      <div class='text'><%= destination.name %></div>
+    </div>
   </div>
 <% end %>
